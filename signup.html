@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Jungle</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Full-page Background -->
+  <div class="banner">
+    
+    <!-- Navbar -->
+    <div class="navbar">
+      <img src="/images/text-1731338381268.png" alt="logo" class="signup-logo">
+      <ul>
+        <li><a href="home.html" title="Redirects to home">Home</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="t&c.html">Terms and Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="signup-content">
+      <h1>Signup for Jungle</h1>
+
+      <!-- Signup Form -->
+      <div class="signup-login-form">
+        <form action="index.html" method="GET"> <!-- Redirects to page.html upon submission -->
+          <div class="signup-form-grid">
+            <div class="signup-form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+            <div class="signup-form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="signup-form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="signup-form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" class="hover-solid-button">
+                Signup 
+            </button>
+          </div>
+          <p>Already have an account? <a href="login.html">Login here</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

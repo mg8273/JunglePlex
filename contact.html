@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags and page title -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Jungle</title>
+  <!-- Link to CSS stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lucide icon library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav class="page-navbar">
+    <!-- Brand logo and name -->
+    <div class="nav-brand">
+     
+      <span>Jungle</span>
+    </div>
+    <!-- Navigation links -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="home.html">Login</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="sub page.html">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact page hero section -->
+  <header class="page-header contact-header">
+    <div class="header-content">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you</p>
+    </div>
+  </header>
+
+  <!-- Main contact section with contact information and form -->
+  <section class="contact-content">
+    <div class="contact-grid">
+      <!-- Contact information (address, phone, email) -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <div class="info-item">
+          <i data-lucide="map-pin" class="info-icon"></i>
+          <div>
+            <h3>Address</h3>
+            <p>D-30, Wazirpura Road, Chandigarh</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i data-lucide="phone" class="info-icon"></i>
+          <div>
+            <h3>Phone</h3>
+            <p>+91 976 091 4467</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i data-lucide="mail" class="info-icon"></i>
+          <div>
+            <h3>Email</h3>
+            <p>support@jungleplex.com</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact form for users to send a message -->
+      <div class="contact-form">
+        <h2>Send us a Message</h2>
+        <form>
+          <!-- Name input -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <!-- Email input -->
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <!-- Subject input -->
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <!-- Message input -->
+          <div class="form-group">
+            <label for="message">FeedBack</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <!-- Submit button -->
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer section with quick links and social media icons -->
+  <footer class="footer">
+    <div class="footer-content">
+      <!-- Quick links section -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="home.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Social media links section -->
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <div class="">
+          <a href="https://www.facebook.com/"><i data-lucide="facebook"></i></a>
+          <a href="https://x.com/?lang=en"><i data-lucide="twitter"></i></a>
+          <a href="https://www.instagram.com/"><i data-lucide="instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Footer bottom section with copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Jungle. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Initialize Lucide icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1615 @@
+/* Banner and General Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+  url(/images/junglebackground.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Navbar Styles */
+.navbar {
+ 
+  width: 100%;
+  
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+  display: flex; /* Align navbar items horizontally */
+}
+
+.navbar ul li {
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #09ff2a;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #53f361dc;
+  text-decoration: underline;
+}
+
+/* Underline effect */
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #53f361dc;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: width 0.5s ease;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+.navbar ul li a {
+  pointer-events: auto;
+}
+
+
+/* Content Section */
+.content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 55px;
+  margin-top: 65px;
+}
+
+.content p {
+  margin: 10px auto;
+  font-weight: 80;
+  line-height: 20px;
+}
+
+/* Button Styles */
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 0px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  background-color: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
+
+
+
+
+
+.signup-content {
+  text-align: center;
+ 
+  color: #fff;
+}
+
+.signup-login-form {
+  max-width: 500px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px; /* Slight border radius for rounded corners */
+  margin: auto;
+  color: #fff;
+}
+
+/* Form Field Styles */
+.signup-form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.signup-form-group label {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.signup-form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #009688;
+  border-radius: 5px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.signup-form-group input:focus {
+  border-color: #53f361;
+}
+
+/* Centering the Button */
+.signup-submit {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.signup-login-form button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 5px; /* Added rounded corners */
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Span (for hover effect) */
+.signup-login-form button span {
+  background-color: #009688;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: width 0.5s ease; /* Smooth transition for hover effect */
+}
+
+.signup-login-form button:hover span {
+  width: 100%;  /* Expand the background on hover */
+}
+
+.signup-login-form button:hover {
+  border: none;  /* Remove border on hover to show background */
+}
+
+/* Additional Styling for Links */
+a {
+  color: #53f361;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .signup-login-form {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* Grid Layout for Signup (2x2) */
+.signup-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+/* Non-grid Form for Login */
+.signup-login-form form > .signup-form-group {
+  margin-bottom: 20px;
+}
+
+/* Button and other styles remain the same */
+.signup-login-form button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-login-form button span {
+  background-color: #009688;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+
+.signup-login-form button:hover span {
+  width: 100%;
+}
+
+.signup-login-form button:hover {
+  border: none;
+}
+
+
+
+
+
+
+/* Terms and Conditions Page Specific Styles */
+.terms-banner {
+  width: 100%;
+  height: 100vh;
+  background-color: #1d2b28;  /* Dark green-black background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.terms-content {
+  max-width: 800px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  height: calc(100vh - 80px);  /* Ensure it fits inside the screen */
+  color: #fff;  /* Ensure text inside the content is white */
+}
+
+.terms-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.terms-content h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #09ff2a;  /* Accent color for section headers */
+}
+
+.terms-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.terms-content a {
+  color: #53f361;  /* Link color */
+  text-decoration: none;
+}
+
+.terms-content a:hover {
+  text-decoration: underline;
+}
+/* Terms and Conditions Page Subtext Link Styling */
+.terms-subtext {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.terms-subtext a {
+  color: #53f361;  /* Green color for the link */
+  text-decoration: none;
+}
+
+.terms-subtext a:hover {
+  text-decoration: underline;
+}
+
+
+
+.help-banner {
+  width: 100%;
+  height: 100vh;
+  background-color: #1d2b28;  /* Dark green-black background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+/* Help content styling */
+.help-content {
+  max-width: 800px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  height: calc(100vh - 80px);  /* Ensure it fits inside the screen */
+  color: #fff;  /* Ensure text inside the content is white */
+}
+
+.help-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.help-content h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #09ff2a;  /* Accent color for section headers */
+}
+
+.help-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.help-content a {
+  color: #53f361;  /* Link color */
+  text-decoration: none;
+}
+
+.help-content a:hover {
+  text-decoration: underline;
+}
+
+/* Help Page Subtext Link Styling */
+.help-subtext {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.help-subtext a {
+  color: #53f361;  /* Green color for the link */
+  text-decoration: none;
+}
+
+.help-subtext a:hover {
+  text-decoration: underline;
+}
+
+/* Transparent Button Styles */
+.hover-solid-button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Solid Color on Hover */
+.hover-solid-button:hover {
+  background-color: #009688; /* Solid background color on hover */
+  color: #fff; /* Keep text color white on hover */
+  border: none; /* Optionally remove the border on hover */
+}
+
+
+
+
+
+
+
+.navbar-top {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #111;
+  padding: 10px 20px;
+  color: white;
+}
+
+.location-bar {
+  display: flex;
+  align-items: center;
+  color: #09ff2a;
+}
+
+.location-bar .location {
+  margin-right: 15px;
+}
+
+.location-update {
+  display: flex;
+  align-items: center;
+}
+
+.location-input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.search-btn {
+  padding: 8px 15px;
+  background-color: #09ff2a;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #06c12d;
+}
+
+.account-options a {
+  color: white;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.account-options a:hover {
+  color: #09ff2a;
+}
+
+/* Category Bar Styles */
+.navbar-bottom {
+  background-color: #111;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.categories-list {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+  margin: 0;
+  flex-wrap: nowrap;
+}
+
+.categories-list li {
+  list-style: none;
+}
+
+.categories-list a {
+  color: #09ff2a;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.categories-list a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .categories-list a {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+}
+
+.product-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-column h3 {
+  font-size: 16px;
+}
+
+.product-column p {
+  font-size: 14px;
+}
+
+.product-column a {
+  color: #09ff2a;
+}
+
+.sign-in-column {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.sign-in-column h3 {
+  font-size: 20px;
+}
+
+.sign-in-column p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.sign-in-button {
+  padding: 10px 20px;
+  background-color: #09ff2a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-in-button:hover {
+  background-color: #06c12d;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 14px;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: white;
+  margin: 0 10px;
+}
+
+
+
+
+
+
+
+/* Overall navbar styles */
+.page-navbar {
+  display: flex;
+  justify-content: space-between; /* Space between the brand and the links */
+  align-items: center; /* Vertically center the brand and links */
+  background-color: #333;
+  padding: 1rem 3rem; /* Adjust the navbar height */
+  height: 70px; /* Ensure navbar has enough height for centering */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center; /* Ensure the brand text is centered vertically */
+  gap: 0.5rem;
+  color: #09ff2a;
+  font-size: 3rem;
+  margin-left: 10px;
+  font-weight: bold;
+  margin-top: 20%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Style for each link */
+.nav-links a {
+  color: #ffffff; /* White text color for the links */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  padding: 0.5rem 1rem; /* Add padding inside the links */
+  
+  border-radius: 4px; /* Slight border-radius for the box effect */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
+}
+
+/* Hover and active link styles */
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #09ff2a; /* Green background on hover and active */
+  padding: 1rem;
+  color: #333; /* Change text color to dark for contrast */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Mobile responsiveness: Stack items vertically on small screens */
+@media (max-width: 768px) {
+  .page-navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack the nav links vertically */
+    gap: 1rem; /* Add space between links */
+    width: 100%; /* Take full width on mobile */
+    padding: 1rem 0; /* Add some padding */
+  }
+
+  .nav-brand {
+    margin-bottom: 1rem; /* Add space below the brand name on small screens */
+  }
+
+  .nav-links a {
+    padding: 10px; /* Add padding around each link for better touch areas */
+    width: 100%; /* Make links take full width */
+    text-align: center; /* Center align the text in the links */
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/images/homepage6.avif');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #09ff2a;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #06c12d;
+}
+
+/* Featured Section */
+.featured {
+  padding: 5rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.featured h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.feature-card h3 {
+  padding: 1rem;
+  margin: 0;
+}
+
+.feature-card p {
+  padding: 0 1rem 1rem;
+  color: #666;
+}
+
+/* Why Choose Us Section */
+.why-us {
+  padding: 5rem 2rem;
+  background-color: white;
+}
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  color: #09ff2a;
+  margin-bottom: 1rem;
+}
+
+/* Page Headers */
+.page-header {
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 64px;
+}
+
+.about-header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3');
+}
+
+.contact-header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3');
+}
+
+.testimonials-header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3');
+}
+
+/* About Page */
+.about-content {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.about-text h2 {
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  margin-bottom: 2rem;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.value-icon {
+  width: 48px;
+  height: 48px;
+  color: #09ff2a;
+  margin-bottom: 1rem;
+}
+
+/* Contact Page */
+.contact-content {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-icon {
+  width: 24px;
+  height: 24px;
+  color: #09ff2a;
+}
+
+.contact-form {
+  background: #dbd3d3;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #09ff2a;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #06c12d;
+}
+
+/* Testimonials Page */
+.testimonials-content {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  padding: 1.5rem;
+}
+
+.rating {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.star-filled {
+  width: 20px;
+  height: 20px;
+  color: #ffd700;
+}
+
+.star-half {
+  width: 20px;
+  height: 20px;
+  color: #ffd700;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: white;
+  padding: 4rem 2rem 2rem;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem; /* Adjusted gap for better spacing on larger screens */
+}
+
+.footer-section h4 {
+  color: #09ff2a;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem; /* Slightly increased font size for headings */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding-left: 0; /* Remove default padding */
+}
+
+.footer-section ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem; /* Increased font size for better readability */
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #09ff2a;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px; /* Increased gap for better spacing between icons */
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem; /* Adjusted font size for social icons */
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #09ff2a;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  font-size: 0.9rem; /* Adjusted font size for the copyright text */
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .footer-content {
+    padding: 1rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1.1rem; /* Decreased heading size for mobile screens */
+  }
+
+  .footer-section ul li {
+    font-size: 0.9rem; /* Smaller text for better mobile readability */
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 10px; /* Adjusted gap for smaller screens */
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem; /* Slightly smaller font size for footer bottom text on mobile */
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size : 2.5rem;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .featured-grid,
+  .benefits-grid,
+  .values-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    height: 30vh;
+  }
+}
+
+.page-navbar {
+  background-color: #111;
+  padding: 1rem 2rem;
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  color: var(--main-green);
+}
+
+
+
+
+
+
+
+
+
+/* Header Section */
+.jungle-electronics-page-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #2b7a78;
+  color: #fff;
+}
+
+.jungle-electronics-page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.jungle-electronics-page-header p {
+  font-size: 1.2rem;
+}
+
+/* Product Grid Section */
+.jungle-electronics-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Product Card */
+.jungle-electronics-product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.jungle-electronics-product-card:hover {
+  transform: translateY(-5px);
+}
+
+.jungle-electronics-product-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.jungle-electronics-product-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.jungle-electronics-product-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.jungle-electronics-product-price {
+  font-size: 1.2rem;
+  color: #e74c3c;
+}
+
+.jungle-electronics-old-price {
+  text-decoration: line-through;
+  font-size: 1rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+.jungle-electronics-buy-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #2b7a78;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.jungle-electronics-buy-button:hover {
+  background-color: #2e8b8b;
+}
+
+
+
+
+/* Header Section */
+.jungle-fashion-page-header {
+  text-align: center;
+  padding: 5rem 1rem;
+  background-color: #111;
+  color: #fff;
+}
+
+.jungle-fashion-page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.jungle-fashion-page-header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Product Grid */
+.jungle-fashion-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexibly fills with 300px minimum */
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Product Card */
+.jungle-fashion-product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.jungle-fashion-product-card:hover {
+  transform: translateY(-5px); /* Card hover effect */
+}
+
+.jungle-fashion-product-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.jungle-fashion-product-card:hover .jungle-fashion-product-image {
+  opacity: 0.9; /* Image fades on hover */
+}
+
+.jungle-fashion-product-title {
+  font-size: 1.6rem;
+  margin: 1rem;
+  color: #333;
+}
+
+.jungle-fashion-product-description {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.jungle-fashion-product-price {
+  font-size: 1.2rem;
+  color: #ff9900;
+  padding: 0 1rem;
+}
+
+.jungle-fashion-old-price {
+  font-size: 1rem;
+  color: #888;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.jungle-fashion-buy-button {
+  width: 97%;
+  padding: 1rem;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+ display: block;
+ margin: 0.5rem auto;
+  border-radius: 1px 1px 1px 1px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.jungle-fashion-buy-button:hover {
+  background-color: #9df8b8; /* Button hover effect */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .jungle-fashion-page-header h1 {
+    font-size: 2.5rem; /* Smaller header text */
+  }
+
+  .jungle-fashion-page-header p {
+    font-size: 1rem; /* Smaller paragraph text */
+  }
+
+  .jungle-fashion-product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust grid for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+.home-living-page-header {
+  text-align: center;
+  padding: 5rem 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.home-living-page-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.home-living-page-header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Product Grid */
+.home-living-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Product Card */
+.home-living-product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.home-living-product-card:hover {
+  transform: translateY(-5px);
+}
+
+.home-living-product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.home-living-product-card:hover .home-living-product-image {
+  opacity: 0.9;
+}
+
+.home-living-product-title {
+  font-size: 1.6rem;
+  margin: 1rem;
+  color: #333;
+}
+
+.home-living-product-description {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.home-living-product-price {
+  font-size: 1.2rem;
+  color: #ff9900;
+  padding: 0 1rem;
+}
+
+.home-living-old-price {
+  font-size: 1rem;
+  color: #888;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.home-living-buy-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.home-living-buy-button:hover {
+  background-color: #e68900;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .home-living-page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-living-page-header p {
+    font-size: 1rem;
+  }
+
+  .home-living-product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.sub {
+  font-family: Arial, sans-serif;
+  background-color: #1b1b1b; /* Dark Background */
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+.jungleHeader2025 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #000; /* Black Header */
+}
+
+/* Site Name Styling */
+.jungleSiteName2025 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #10db4d; /* Yellow */
+   /* Green Shadow */
+}
+
+/* Navigation Styling */
+.jungleNav2025 a {
+  color: #fff; /* White Text */
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.jungleNav2025 a:hover {
+  color: #008000; /* Green Hover */
+}
+
+/* Main Container */
+.jungleMainContainer2025 {
+  margin: auto;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.jungleHeading2025 {
+  font-size: 28px;
+  color: #ffcc00; /* Yellow Heading */
+  margin-bottom: 15px;
+}
+
+.jungleText2025 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.jungleForm2025 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.jungleForm2025 label {
+  margin: 10px 0 5px;
+  font-size: 14px;
+}
+
+.jungleForm2025 input {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.buttoncontainer{
+  text-align: center;
+}
+
+.jungleButton2025 {
+  background-color: #008000; /* Green */
+  color: #ffcc00; /* Yellow Text */
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  
+  
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.jungleButton2025:hover {
+  background-color: #006400; /* Darker Green */
+}
+
+/* Footer Countdown */
+#jungleCountdownFooter2025 {
+  background-color: #ffcc00; /* Yellow Footer */
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
