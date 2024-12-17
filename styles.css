@@ -9,7 +9,7 @@ html, body {
   width: 100%;
   height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
-  url(/images/junglebackground.jpg);
+  url(./images/junglebackground.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -706,7 +706,7 @@ a:hover {
 .hero {
   height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('/images/homepage6.avif');
+    url('./images/homepage6.avif');
   background-size: cover;
   background-position: center;
   display: flex;
